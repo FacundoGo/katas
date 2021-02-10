@@ -47,3 +47,26 @@ function findUniq(arr) {
   });
     return filt[0]
   }
+
+
+  // mumbling - make each letter in s repeat the number of times its index
+  function accum(s) {
+    let smallS = s.toLowerCase()
+    let ans = []
+      for (let i = 0; i < smallS.length ; i ++){
+        let tempStr = smallS[i].toUpperCase()
+        for (let j = 0; j < i ; j++){
+          tempStr += smallS[i]
+        }
+        ans.push(tempStr)
+      }
+    
+    return ans.join('-')
+    }
+
+    // set alarm - answers true if employed and not on holiday
+    function setAlarm(employed, vacation){
+      let ans = ''
+       employed && !vacation ? ans = true : ans = false 
+        return ans
+      }
