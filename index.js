@@ -70,3 +70,22 @@ function findUniq(arr) {
        employed && !vacation ? ans = true : ans = false 
         return ans
       }
+
+      // separate a string that is camecases using a regex
+      function solution(string) {
+        return(string.replace(/([A-Z])/g, ' $1'));
+      
+      }
+
+      // number of people on a bus
+      // array of arrays , first number indicate how many people get on, and second number indicate how many get off
+      var number = function(busStops){
+        let res = 0
+        for (let stop of busStops){
+          res += stop[0] - stop[1]
+        }
+        
+        return res
+      }
+      
+      
