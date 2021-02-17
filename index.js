@@ -88,4 +88,8 @@ function findUniq(arr) {
         return res
       }
       
-      
+///      function takes in two arguments, bullets and dragons
+// if the number of bullets is greater than or equal to the number of dragons time 2, then the hero will survive
+function hero(bullets, dragons){
+  return bullets >= dragons * 2
+}
