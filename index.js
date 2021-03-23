@@ -93,3 +93,21 @@ function findUniq(arr) {
 function hero(bullets, dragons){
   return bullets >= dragons * 2
 }
+
+
+// sorting and array and returning the first element with *** in between each
+function twoSort(s) {
+  // first sort them
+  let sorted = [...s].sort()
+  
+  
+  //take first value, and log each letter with *** between them
+  
+  let answer = sorted[0]
+  let solution = ''; 
+  for (let i=0;i < answer.length-1; i++){
+    solution += `${answer[i]}***`
+  }
+  solution += `${answer[answer.length-1]}`
+  return solution
+}
