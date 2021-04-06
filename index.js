@@ -111,3 +111,33 @@ function twoSort(s) {
   solution += `${answer[answer.length-1]}`
   return solution
 }
+
+/// get the nth even
+function nthEven(n){
+  return (n-1)*2
+}
+
+// evaporator
+
+function evaporator(content, evap_per_day, threshold){ 
+  let days = 0;
+  let percentage = 100;
+  
+  while (percentage > threshold) {
+    percentage = percentage - percentage *(evap_per_day/100)
+    days += 1
+  }
+  return days
+}
+
+// number to price two decimals, rounded to the correct(?) places
+var numberToPrice = function(number) {
+  if (!Number(number)) return 'NaN';
+  return Number(number.toString().split('.').map((v,i) => {
+    if (i == 1) {
+      return v.slice(0,2);
+    } else {
+      return v;
+    }
+  }).join('.')).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+}
