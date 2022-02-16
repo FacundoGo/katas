@@ -141,3 +141,19 @@ var numberToPrice = function(number) {
     }
   }).join('.')).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 }
+
+//check if something is a palindrome i.e. same forward as backwards
+function isPalindrome(x) {
+  // split the string and make an array
+  var strSplit = x.split('');
+  console.log(strSplit)
+  //reverse the array
+  var revArray = strSplit.reverse();
+  console.log(revArray)
+  // join the array to make a string
+  var newStr = revArray.join('');
+  console.log(newStr)
+  // if reversed string is same as initial string, then palindrome
+  return newStr.toLowerCase() === x.toLowerCase()
+  
+}
