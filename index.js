@@ -157,3 +157,12 @@ function isPalindrome(x) {
   return newStr.toLowerCase() === x.toLowerCase()
   
 }
+
+// get two numbers as strings, return their sum as string - if input is not a number, use 0
+function sumStr(a,b) {
+  let numberA = parseInt(a) || 0
+  let numberB = parseInt(b) || 0
+  let sum = numberA + numberB
+  let answer = sum.toString()
+  return answer
+}
